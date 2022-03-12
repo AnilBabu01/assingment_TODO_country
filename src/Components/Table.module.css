@@ -1,0 +1,36 @@
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 350px;
+}
+
+.table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.table img {
+    width: 40px;
+}
+
+.table .img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.table .img button {
+    color: white;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
