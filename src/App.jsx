@@ -72,6 +72,7 @@ function App() {
             type={"text"}
             autoComplete="off"
             placeholder="Enter Country Name"
+            required
           />
         </label>
         <label>
@@ -83,6 +84,7 @@ function App() {
             type={"number"}
             autoComplete="off"
             placeholder="Enter Country Code"
+            required
           />
         </label>
         <label>
@@ -92,6 +94,7 @@ function App() {
             onChange={handelChange}
             value={value.flag}
             type={"text"}
+            required
             autoComplete="off"
             placeholder="Enter Country Flag"
           />
