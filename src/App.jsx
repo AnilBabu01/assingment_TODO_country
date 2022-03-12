@@ -10,27 +10,29 @@ function App() {
   const handelChange = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
-
+  const dum = [
+    {
+      name: "India",
+      code: "+91",
+      flag: "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png?20111003033457",
+    },
+    {
+      name: "India",
+      code: "+1",
+      flag: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png?20151118161041",
+    },
+    {
+      name: "Russia",
+      code: "+98",
+      flag: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png",
+    },
+  ];
   const [data, setData] = React.useState(
-    JSON.parse(localStorage.getItem("value")).length
-      ? JSON.parse(localStorage.getItem("value"))
-      : [
-          {
-            name: "India",
-            code: "+91",
-            flag: "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png?20111003033457",
-          },
-          {
-            name: "India",
-            code: "+1",
-            flag: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png?20151118161041",
-          },
-          {
-            name: "Russia",
-            code: "+98",
-            flag: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png",
-          },
-        ]
+    JSON.parse(localStorage.getItem("value"))
+      ? JSON.parse(localStorage.getItem("value")).length
+        ? JSON.parse(localStorage.getItem("value"))
+        : dum
+      : dum
   );
   React.useEffect(() => {
     localStorage.setItem("value", JSON.stringify(data));
