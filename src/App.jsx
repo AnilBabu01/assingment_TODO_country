@@ -45,13 +45,9 @@ function App() {
     setValue({ name: "", code: "", flag: "" });
   };
   const itemDelete = (item) => {
-    console.log(item);
-    const arr = data.map((i, pos) => (pos !== item ? i : null));
-    arr.filter((n) => n);
-    const temp = [];
-    for (let i of arr) i && temp.push(i);
-    console.log(temp);
-    setData(temp);
+    
+    const array =data.filter((e,pos)=>(pos!==item))
+    setData(array);
   };
   return (
     <div
